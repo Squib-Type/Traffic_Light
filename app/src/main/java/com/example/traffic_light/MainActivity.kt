@@ -13,6 +13,7 @@ private const val isStop = 0
 private const val isGo = 1
 private const val isWait = 2
 
+
 private lateinit var binding: ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         binding.trafficLightButton.setOnClickListener {
             if(currentState == isStop) {
                 binding.trafficLightButton.text = "GO"
-                // binding.trafficLightButton.backgroundTint(R.color.green)
+                binding.trafficLightButton.setBackgroundColor(getResources().getColor(R.color.green))
                 binding.redlight.visibility = View.INVISIBLE
                 binding.yellowlight.visibility = View.INVISIBLE
                 binding.greenlight.visibility = View.VISIBLE
@@ -34,14 +35,14 @@ class MainActivity : AppCompatActivity() {
 
             } else if(currentState == isGo) {
                 binding.trafficLightButton.text = "WAIT"
-                // binding.trafficLightButton.backgroundTint(R.color.yellow)
+                binding.trafficLightButton.setBackgroundColor(getResources().getColor(R.color.yellow))
                 binding.redlight.visibility = View.INVISIBLE
                 binding.yellowlight.visibility = View.VISIBLE
                 binding.greenlight.visibility = View.INVISIBLE
                 currentState = isWait
             } else {
                 binding.trafficLightButton.text = "STOP"
-                // binding.trafficLightButton.backgroundTint(R.color.red)
+                binding.trafficLightButton.setBackgroundColor(getResources().getColor(R.color.red))
                 binding.redlight.visibility = View.VISIBLE
                 binding.yellowlight.visibility = View.INVISIBLE
                 binding.greenlight.visibility = View.INVISIBLE
