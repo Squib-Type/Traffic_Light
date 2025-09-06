@@ -1,8 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.Traffic_Light" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<!--        <item name="colorRed">@color/red</item>-->
+<!--        <item name="colorGreen">@color/green</item>-->
+<!--        <item name="colorYellow">@color/yellow</item> -->
+<!--        -->
     </style>
 
     <style name="Theme.Traffic_Light" parent="Base.Theme.Traffic_Light" />
